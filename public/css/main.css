@@ -1,6 +1,14 @@
 body {
 	margin-top: 10%;
 }
+
+.text-center {
+	text-align: center;
+}
+
+.btn > a {
+	color: white;
+}
 .newButton {
 	margin-top: 15%;
 }

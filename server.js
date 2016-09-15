@@ -11,7 +11,11 @@ app.set('view engine', 'pug')
 app.use(express.static('public'))
 
 app.get('/', (req,res) => {
-	res.render('home')
+	res.render('home', {home: true})
+})
+
+app.get('/new', (req,res) => {
+	res.render('newArticle')
 })
 
 
