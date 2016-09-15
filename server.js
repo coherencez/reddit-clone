@@ -2,6 +2,7 @@
 // third part modules
 const express = require('express')
   ,       app = express()
+  ,    routes = require('./routes/')
 
 // project variables
   ,      port = process.env.PORT || 3000
@@ -10,13 +11,8 @@ app.set('port', port)
 app.set('view engine', 'pug')
 app.use(express.static('public'))
 
-app.get('/', (req,res) => {
-	res.render('home', {home: true})
-})
+app.use(routes)
 
-app.get('/new', (req,res) => {
-	res.render('newArticle')
-})
 
 
 app.listen(port, () => {
