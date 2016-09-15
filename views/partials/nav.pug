@@ -12,4 +12,4 @@ nav.navbar.navbar-default.navbar-fixed-top.redditNav
                     a.navEl(href='/') Home
             ul.nav.navbar-nav.navbar-right
                 if(home)
-                    li: button.btn.btn-primary.newButton: a(href='/new') New
+                    li: form(action='/new'): button.btn.btn-primary.newButton New

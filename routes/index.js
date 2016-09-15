@@ -16,8 +16,8 @@ router.get('/', (req,res, cb) => {
 
 router.post('/', (req,res,cb) => {
 	let id = req.body.upvote || req.body.downvote
-	let currentRating
-	let rating
+	  , currentRating
+	  , rating
 	Article
 		.find({_id: id}, {rating: 1})
 		.then(data => {
@@ -43,6 +43,6 @@ router.post('/new', (req,res,cb) => {
 			.create(req.body)
 			.then(() => res.redirect('/'))
 			.catch(cb)
-	})
+})
 
 module.exports = router
