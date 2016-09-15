@@ -1,0 +1,17 @@
+{
+  "name": "reddit-clone",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Thomas Swann <tkswann@mac.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/tkswann2/reddit-clone",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
