@@ -6,9 +6,29 @@ body {
 	text-align: center;
 }
 
-.btn > a {
+.newButton > a {
 	color: white;
 }
 .newButton {
 	margin-top: 15%;
+}
+
+.articleRow {
+	margin: 2% 0;
+	padding: 1%;
+	border-bottom: 2px solid grey;
+}
+
+.articleRow .countDiv {
+	vertical-align: center;
+	text-align: center;
+	margin-top: 10%;
+	height: 30px;
+	width: 25px;
+	color: rgba(0,0,0,.5)
+}
+
+.articleRow img {
+	height: 80px;
+	width: 80px;
 }
