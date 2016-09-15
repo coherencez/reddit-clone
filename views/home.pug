@@ -2,12 +2,14 @@ extends layout.pug
 
 block content
 	.container
-		.row
-			.col-xs-1
-				button: span(class='glyphicon glyphicon-chevron-up')
-				p 85
-				button: span(class='glyphicon glyphicon-chevron-down')
-			.col-xs-2
-				img(src='http://www.freedigitalphotos.net/images/img/homepage/87357.jpg' height='80px' width='80px')
-			.col-xs-9.text-center
-				h1: a(href='/about') Title of Article
+		each article in data
+			.row
+				.col-xs-1
+					form(method='POST')
+						button#upvote(type='submit' name='upvote' value=article._id): span(class='glyphicon glyphicon-chevron-up')
+						p.text-center #{article.rating}
+						button#downvote(type='submit' name='downvote' value=article._id): span(class='glyphicon glyphicon-chevron-down')
+				.col-xs-2
+					img(src=article.image height='80px' width='80px')
+				.col-xs-9
+					h1: a(href=article.url) #{article.title}
