@@ -1,0 +1,18 @@
+extends layout.pug
+
+block content
+    h1.text-center.stitched Post New Article
+    form(method='POST')
+        .form-group
+            label.contactForm(for='title') Title
+            input.form-control#name(placeholder="Insert Your Tite Here" type='text' name='title' required)
+        .form-group
+            label.contactForm(for='url') Article URL
+            input.form-control#url(placeholder="http://www.yourarticlehere.com" type='text' name='url' required)
+        .form-group
+            label.contactForm(for='image') Image URL
+            input.form-control#image(placeholder="http://google.com/images/<your img here>" type='text' name='image' required)
+        .form-group
+            label.contactForm(for='comments') Comments
+            textarea.form-control#textArea(rows='5' name='comments')
+        button.btn.btn-success.btn-lg(type="submit") Submit
