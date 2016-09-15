@@ -16,21 +16,16 @@ router.get('/', (req,res, cb) => {
 
 router.post('/', (req,res,cb) => {
 	let id = req.body.upvote || req.body.downvote
-	  , currentRating
-	  , rating
-	Article
-		.find({_id: id}, {rating: 1})
-		.then(data => {
-			currentRating = data[0].rating
-			;(Object.keys(req.body)[0] === 'upvote')
-				? rating = currentRating + 1
-				: rating = currentRating - 1
-		})
-		.then(() => {
-			Article
-				.update({_id: id}, {$set: {rating: rating}})
-				.then(() => res.redirect('/'))
-		})
+	  , voteIncrementer
+
+		;(Object.keys(req.body)[0] === 'upvote')
+			? voteIncrementer = 1
+			: voteIncrementer = -1
+
+		Article
+			.update({_id: id}, {$inc: {rating: voteIncrementer}})
+			.then(() => res.redirect('/'))
+			.catch(cb)
 })
 
 router.get('/new', (req,res) => {
@@ -38,7 +33,6 @@ router.get('/new', (req,res) => {
 })
 
 router.post('/new', (req,res,cb) => {
-		console.log("REQ", req.body);
 		Article
 			.create(req.body)
 			.then(() => res.redirect('/'))
