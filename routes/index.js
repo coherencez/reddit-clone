@@ -18,9 +18,7 @@ router.post('/', (req,res,cb) => {
 	let id = req.body.upvote || req.body.downvote
 	  , voteIncrementer
 
-		;(Object.keys(req.body)[0] === 'upvote')
-			? voteIncrementer = 1
-			: voteIncrementer = -1
+	;(Object.keys(req.body)[0] === 'upvote') ? voteIncrementer = 1 : voteIncrementer = -1
 
 		Article
 			.update({_id: id}, {$inc: {rating: voteIncrementer}})
@@ -37,6 +35,12 @@ router.post('/new', (req,res,cb) => {
 			.create(req.body)
 			.then(() => res.redirect('/'))
 			.catch(cb)
+})
+
+
+router.get('/comments/:id', (req,res) => {
+	console.log("Hello", req.params);
+	res.render('comments')
 })
 
 module.exports = router

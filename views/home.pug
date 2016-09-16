@@ -13,4 +13,5 @@ block content
 				.col-xs-2
 					img.images(src=article.image)
 				.col-xs-9
-					h1: a(href=article.url) #{article.title}
+					h3: a(href=article.url) #{article.title}
+					a(href='/comments/'+article._id) Comments
