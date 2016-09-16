@@ -47,4 +47,15 @@ router.get('/comments/:id', ({params: {id}},res) => {
 		})
 })
 
+router.post('/comments/:id', ({body: {comments}, params: {id}},res) => {
+	let newObj = {
+		text: comments,
+		vote: 0,
+		id: Date()
+	}
+	Article
+		.update({_id: id}, {$push: { comments: newObj } })
+		.then(() => res.redirect(`/comments/${id}`))
+})
+
 module.exports = router
