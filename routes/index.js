@@ -38,9 +38,13 @@ router.post('/new', (req,res,cb) => {
 })
 
 
-router.get('/comments/:id', (req,res) => {
-	console.log("Hello", req.params);
-	res.render('comments')
+router.get('/comments/:id', ({params: {id}},res) => {
+	Article
+		.find({_id: id})
+		.then(data => {
+			let [article, ...rest] = data
+			res.render('comments', {article})
+		})
 })
 
 module.exports = router

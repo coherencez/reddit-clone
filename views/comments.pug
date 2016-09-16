@@ -2,18 +2,16 @@ extends layout.pug
 
 block content
 	.container.commentContainer
-		.row
+		.row.articleRow
+			.col-xs-1
+				div.text-center.countDiv
+					p.voteCount #{article.rating}
+			.col-xs-2
+				img.images(src=article.image)
+			.col-xs-9
+				h3: a(href=article.url) #{article.title}
+		//- each comment in article.comment
+			.row.comment
 				.col-xs-12
-					h4 Comments from users here
-		.row
-				.col-xs-12
-					h4 Comments from users here
-		.row
-				.col-xs-12
-					h4 Comments from users here
-		.row
-				.col-xs-12
-					h4 Comments from users here
-		.row
-				.col-xs-12
-					h4 Comments from users here
+					div.text-center
+						p #{comment}

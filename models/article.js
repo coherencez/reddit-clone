@@ -7,6 +7,7 @@ module.exports = mongoose.model('Article', {
 	title: String,
 	image: String,
 	url: String,
-	comments: String,
-	rating: {type: Number, default: 0}
+	tags: [String],
+	rating: {type: Number, default: 0},
+	comments: Array,
 })
