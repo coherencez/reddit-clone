@@ -1,42 +1,152 @@
 [
-  {
-    "title": "First Post!",
-    "url": "https://www.inverse.com/article/20876-steubenville-rape-case-deric-lostutter",
-    "image": "https://fsmedia.imgix.net/8c/e2/e1/d7/b403/4495/b3fc/68e7d5a282e0/the-cfaa-is-about-as-outdated-as-these-stock-photos-of-hacking.jpeg?dpr=2&auto=format,compress,enhance&q=75",
-    "comments": "hackers and stuff",
-    "__v": 0,
-    "rating": -3
-  },
-  {
-    "title": "Man Gets Arrested",
-    "url": "https://www.theguardian.com/film/2016/sep/15/man-arrested-for-speeding-in-delorean-at-88mph-back-to-the-future",
-    "image": "https://i.guim.co.uk/img/media/0615c58ad09c9db13932c3c4f5e399737df26abe/0_97_2882_1729/master/2882.jpg?w=620&q=20&auto=format&usm=12&fit=max&dpr=2&s=d68663c681444f7121a585b5c38d96ce",
-    "comments": "crazy delorean",
-    "__v": 0,
-    "rating": 10
-  },
-  {
-    "title": "Google will blow your mind",
-    "url": "https://www.weforum.org/agenda/2016/07/google-runs-on-5000-times-more-code-than-the-original-space-shuttle",
-    "image": "https://assets.weforum.org/article/image/large_vZOBNiV076F64T0EwlqbpaNDY0Sjdx4RfjZTs89roBg.jpg",
-    "comments": "space shuttle code",
-    "__v": 0,
-    "rating": 4
-  },
-  {
-    "title": "heres a new title",
-    "url": "http://google.com",
-    "image": "https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png",
-    "comments": "google is here!",
-    "rating": 3,
-    "__v": 0
-  },
-  {
-    "title": "Harley Quinn",
-    "url": "http://www.independent.co.uk/arts-entertainment/films/news/harley-quinn-margot-robbie-to-co-produce-suicide-squad-spin-off-film-a7308661.html",
-    "image": "https://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2016/07/25/08/harley-quinn-suicide-squad.jpg",
-    "comments": "",
-    "rating": 9,
-    "__v": 0
-  }
+    {
+        "title": "First Post!",
+        "url": "https://www.inverse.com/article/20876-steubenville-rape-case-deric-lostutter",
+        "image": "https://fsmedia.imgix.net/8c/e2/e1/d7/b403/4495/b3fc/68e7d5a282e0/the-cfaa-is-about-as-outdated-as-these-stock-photos-of-hacking.jpeg?dpr=2&auto=format,compress,enhance&q=75",
+        "tags": "hackers and stuff",
+        "__v": 0,
+        "rating": -3,
+        "comments": [
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            }
+        ]
+    },
+    {
+        "title": "Man Gets Arrested",
+        "url": "https://www.theguardian.com/film/2016/sep/15/man-arrested-for-speeding-in-delorean-at-88mph-back-to-the-future",
+        "image": "https://i.guim.co.uk/img/media/0615c58ad09c9db13932c3c4f5e399737df26abe/0_97_2882_1729/master/2882.jpg?w=620&q=20&auto=format&usm=12&fit=max&dpr=2&s=d68663c681444f7121a585b5c38d96ce",
+        "tags": "crazy delorean",
+        "__v": 0,
+        "rating": 10,
+        "comments": [
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            }
+        ]
+    },
+    {
+        "title": "Google will blow your mind",
+        "url": "https://www.weforum.org/agenda/2016/07/google-runs-on-5000-times-more-code-than-the-original-space-shuttle",
+        "image": "https://assets.weforum.org/article/image/large_vZOBNiV076F64T0EwlqbpaNDY0Sjdx4RfjZTs89roBg.jpg",
+        "tags": "space shuttle code",
+        "__v": 0,
+        "rating": 4,
+        "comments": [
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            }
+        ]
+    },
+    {
+        "title": "heres a new title",
+        "url": "http://google.com",
+        "image": "https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png",
+        "tags": "google is here!",
+        "rating": 3,
+        "comments": [
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            }
+        ],
+        "__v": 0
+    },
+    {
+        "title": "Harley Quinn",
+        "url": "http://www.independent.co.uk/arts-entertainment/films/news/harley-quinn-margot-robbie-to-co-produce-suicide-squad-spin-off-film-a7308661.html",
+        "image": "https://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2016/07/25/08/harley-quinn-suicide-squad.jpg",
+        "tags": "",
+        "rating": 9,
+        "comments": [
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            },
+            {
+                "text": "comments here about article",
+                "vote": 6,
+                "id": "2016-09-16T18:34:01.752Z"
+            }
+        ],
+        "__v": 0
+    }
 ]
