@@ -47,15 +47,33 @@ router.get('/comments/:id', ({params: {id}},res) => {
 		})
 })
 
-router.post('/comments/:id', ({body: {comments}, params: {id}},res) => {
-	let newObj = {
-		text: comments,
-		vote: 0,
-		id: Date()
+router.post('/comments/:id', ({body, params: {id}},res, cb) => {
+	if(body.submitButton) {
+		let newObj = {
+			text: body.comments,
+			vote: 0,
+			id: Date()
+		}
+		Article
+			.update({_id: id}, {$push: { comments: newObj } })
+			.then(() => res.redirect(`/comments/${id}`))
+			.catch(cb)
+	} else {
+		let voteIncrementer
+		 ,         voteType
+
+		if(Object.keys(body)[0] === 'upvote') {
+			voteIncrementer = 1
+			voteType = 'upvote' 
+		} else {
+			voteIncrementer = -1
+			voteType = 'downvote'
+		}
+		Article
+			.update({_id: id, "comments": { $elemMatch: { "id": body[voteType]} } }, { "$inc": { "comments.$.vote": voteIncrementer}} )
+			.then(() => res.redirect(`/comments/${id}`))
+			.catch(cb)
 	}
-	Article
-		.update({_id: id}, {$push: { comments: newObj } })
-		.then(() => res.redirect(`/comments/${id}`))
 })
 
 module.exports = router
