@@ -1,7 +1,7 @@
 {
   "name": "reddit-clone",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "authors": [
     "Thomas Swann <tkswann@mac.com>"
   ],
