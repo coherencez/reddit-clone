@@ -9,7 +9,7 @@ const express = require('express')
 
 // project variables
   ,    routes = require('./routes/')
-  , {connect} = require('./database')
+  , {connect} = require('./db/database')
   ,      port = process.env.PORT || 3000
   ,       app = express()
 
