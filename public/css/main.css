@@ -32,3 +32,11 @@ body {
 	height: 80px;
 	width: 80px;
 }
+
+.commentDiv {
+}
+
+.commentDiv p {
+	display: inline-block;
+	margin: 0 5%;
+}
