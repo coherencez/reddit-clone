@@ -19,7 +19,7 @@ body {
 	border-bottom: 2px solid grey;
 }
 
-.articleRow .countDiv {
+.countDiv {
 	vertical-align: center;
 	text-align: center;
 	margin-top: 10%;
@@ -33,7 +33,30 @@ body {
 	width: 80px;
 }
 
+
+.commentRow {
+	margin: 2% 0;
+	border-bottom: 2px solid grey;
+	padding: 1%;
+	height: 100px;
+}
+
+.commentRow form {
+	height: 75px;
+	width: 25px;
+	position: relative;
+	bottom: 15px;
+}
+
 .commentDiv p {
 	display: inline-block;
 	margin: 0 5%;
+	font-weight: bold;
+}
+
+.timestamp {
+	display: block;
+	position: relative;
+	left: 5%;
+	font-size: .7em;
 }

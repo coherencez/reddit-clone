@@ -12,16 +12,18 @@ block content
         h3: a(href=article.url) #{article.title}
     if(article.comments)
       each comment in article.comments
-        .row.comment
+        .row.commentRow
           .col-xs-2
             form(method='POST')
               button.text-center#upvote(type='submit' name='upvote' value=comment.id): span(class='glyphicon glyphicon-chevron-up')
               div.text-center.countDiv
-                p.voteCount #{comment.vote}
+                p.voteCount #{comment.vote} 
               button.text-center#downvote(type='submit' name='downvote' value=comment.id): span(class='glyphicon glyphicon-chevron-down')
           .col-xs-10
             div.commentDiv
               p #{comment.text}
+              span.timestamp #{comment.id}
+
     .row.newCommentRow
       .col-xs-12
         h1.text-center.stitched Post New Comment
