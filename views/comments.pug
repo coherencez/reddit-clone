@@ -10,17 +10,18 @@ block content
         img.images(src=article.image)
       .col-xs-9
         h3: a(href=article.url) #{article.title}
-    each comment in article.comments
-      .row.comment
-        .col-xs-2
-          form(method='POST')
-            button.text-center#upvote(type='submit' name='upvote' value=comment.id): span(class='glyphicon glyphicon-chevron-up')
-            div.text-center.countDiv
-              p.voteCount #{comment.vote}
-            button.text-center#downvote(type='submit' name='downvote' value=comment.id): span(class='glyphicon glyphicon-chevron-down')
-        .col-xs-10
-          div.commentDiv
-            p #{comment.text}
+    if(article.comments)
+      each comment in article.comments
+        .row.comment
+          .col-xs-2
+            form(method='POST')
+              button.text-center#upvote(type='submit' name='upvote' value=comment.id): span(class='glyphicon glyphicon-chevron-up')
+              div.text-center.countDiv
+                p.voteCount #{comment.vote}
+              button.text-center#downvote(type='submit' name='downvote' value=comment.id): span(class='glyphicon glyphicon-chevron-down')
+          .col-xs-10
+            div.commentDiv
+              p #{comment.text}
     .row.newCommentRow
       .col-xs-12
         h1.text-center.stitched Post New Comment
