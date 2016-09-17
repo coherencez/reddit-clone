@@ -6,28 +6,7 @@
         "tags": "hackers and stuff",
         "__v": 0,
         "rating": -3,
-        "comments": [
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            }
-        ]
+        "comments": []
     },
     {
         "title": "Man Gets Arrested",
@@ -36,28 +15,7 @@
         "tags": "crazy delorean",
         "__v": 0,
         "rating": 10,
-        "comments": [
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            }
-        ]
+        "comments": []
     },
     {
         "title": "Google will blow your mind",
@@ -66,28 +24,7 @@
         "tags": "space shuttle code",
         "__v": 0,
         "rating": 4,
-        "comments": [
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            }
-        ]
+        "comments": []
     },
     {
         "title": "heres a new title",
@@ -95,28 +32,7 @@
         "image": "https://www.gstatic.com/images/branding/googlelogo/2x/googlelogo_color_284x96dp.png",
         "tags": "google is here!",
         "rating": 3,
-        "comments": [
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            }
-        ],
+        "comments": [],
         "__v": 0
     },
     {
@@ -125,28 +41,7 @@
         "image": "https://static.independent.co.uk/s3fs-public/styles/story_large/public/thumbnails/image/2016/07/25/08/harley-quinn-suicide-squad.jpg",
         "tags": "",
         "rating": 9,
-        "comments": [
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            },
-            {
-                "text": "comments here about article",
-                "vote": 6,
-                "id": "2016-09-16T18:34:01.752Z"
-            }
-        ],
+        "comments": [],
         "__v": 0
     }
 ]
