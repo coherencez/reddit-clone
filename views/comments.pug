@@ -21,6 +21,7 @@ block content
               button.text-center#downvote(type='submit' name='downvote' value=comment.id): span(class='glyphicon glyphicon-chevron-down')
           .col-xs-10
             div.commentDiv
+              p #{comment.user} :
               p #{comment.text}
               span.timestamp #{comment.id}
 

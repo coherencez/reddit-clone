@@ -14,12 +14,13 @@ module.exports.new = ({params: {id}},res) => {
     })
 }
 
-module.exports.create = ({body, params: {id}},res, cb) => {
+module.exports.create = ({session,body, params: {id}},res, cb) => {
   if(body.submitButton) {
     let newObj = {
       text: body.comments,
       vote: 0,
-      id: new Date()
+      id: new Date(),
+      user: session.user
     }
     Article
       .update({_id: id}, {$push: { comments: newObj } })
