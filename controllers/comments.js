@@ -14,8 +14,7 @@ module.exports.new = ({params: {id}},res) => {
     })
 }
 
-module.exports.create = ({user,session,body, params: {id}},res, cb) => {
-  console.log("USER", session.user)
+module.exports.create = ({user,body, params: {id}},res, cb) => {
   if(body.submitButton) {
     let newObj = {
       text: body.comments,
@@ -41,7 +40,6 @@ module.exports.create = ({user,session,body, params: {id}},res, cb) => {
       Article
         .update({_id: id, "comments": { $elemMatch: { "id": body[voteType]} } }, { "$inc": { "comments.$.vote": voteIncrementer}} )
         .then(() => {
-          console.log('HELLO FORM THE THEN BLOK')
           res.redirect(`/comments/${id}`)
         })
         .catch(cb)
