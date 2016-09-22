@@ -22,8 +22,6 @@ router.post('/login', session.create)
 router.use((req,res,next) => {
   if(req.isAuthenticated()) {
     next()
-  } else if (!req.user) {
-    res.redirect(req.originalUrl)
   } else {
     res.redirect('/login')
   }

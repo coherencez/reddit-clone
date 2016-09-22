@@ -21,7 +21,7 @@ module.exports.create = ({user,session,body, params: {id}},res, cb) => {
       text: body.comments,
       vote: 0,
       id: new Date(),
-      user: session.user
+      user: user.user
     }
     Article
       .update({_id: id}, {$push: { comments: newObj } })
