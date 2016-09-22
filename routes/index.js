@@ -2,40 +2,17 @@
 
 const {Router} = require('express')
   ,     router = Router()
+  ,       home = require('../controllers/home')
+  ,    newPost = require('../controllers/new')
   ,    Article = require('../models/article')
 
-router.get('/', (req,res,cb) => {
-  Article
-    .find()
-    .sort({rating: -1})
-    .then(data => {
-      res.render('home', {home: true, data})
-    })
-    .catch(cb)
-})
+router.get('/', home.new)
 
-router.post('/', (req,res,cb) => {
-  let id = req.body.upvote || req.body.downvote
-    , voteIncrementer
+router.post('/', home.edit)
 
-  ;(Object.keys(req.body)[0] === 'upvote') ? voteIncrementer = 1 : voteIncrementer = -1
+router.get('/new', newPost.new)
 
-    Article
-      .update({_id: id}, {$inc: {rating: voteIncrementer}})
-      .then(() => res.redirect('/'))
-      .catch(cb)
-})
-
-router.get('/new', (req,res) => {
-    res.render('newArticle')
-})
-
-router.post('/new', (req,res,cb) => {
-    Article
-      .create(req.body)
-      .then(() => res.redirect('/'))
-      .catch(cb)
-})
+router.post('/new', newPost.create)
 
 
 router.get('/comments/:id', ({params: {id}},res) => {
@@ -55,7 +32,7 @@ router.post('/comments/:id', ({body, params: {id}},res, cb) => {
     let newObj = {
       text: body.comments,
       vote: 0,
-      id: Date()
+      id: new Date()
     }
     Article
       .update({_id: id}, {$push: { comments: newObj } })

@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+    h1.text-center.stitched Register
+    form(method='POST')
+        .form-group
+            label.contactForm(for='user') User Name
+            input.form-control#name(placeholder="User " type='text' name='user' required)
+        .form-group
+            label.contactForm(for='password') Password
+            input.form-control#url(placeholder="http://www.yourarticlehere.com" type='password' name='password' required)
+        .form-group
+            label.contactForm(for='confirm') Confirm Password
+            input.form-control#image(placeholder="**************" type='password' name='confirm' required)
+        button.btn.btn-success.btn-lg(type="submit") Submit
