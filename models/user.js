@@ -3,6 +3,8 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 
+const BCRYPT_DIFFICULTY = 15
+
 const userSchema = new mongoose.Schema({
 	user: {
 		type: String,
@@ -13,6 +15,16 @@ const userSchema = new mongoose.Schema({
 		type: String,
 		required: true
 	}
+})
+
+// lifecycle methods
+userSchema.pre('save', function(cb) {
+	const user = this
+	bcrypt.hash(user.password, BCRYPT_DIFFICULTY, (err, hashedPassword) => {
+		if(err) {return cb(err)}
+			user.password = hashedPassword
+			cb()
+	})
 })
 
 // class static methods
