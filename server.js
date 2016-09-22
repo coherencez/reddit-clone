@@ -6,8 +6,9 @@ const express = require('express')
 		red
 	 } = require('chalk')
 	, bodyParser = require('body-parser')
-	, session = require('express-session')
+	,    session = require('express-session')
 	, RedisStore = require('connect-redis')(session)
+	,   passport = require('passport')
 
 // project variables
   ,    routes = require('./routes/')
@@ -19,12 +20,17 @@ const express = require('express')
 app.set('port', port)
 app.set('view engine', 'pug')
 app.use(session({
+	url: process.env.REDIS_URL || 'redis://localhost:6379',
 	store: new RedisStore(),
-	secret: 'reddit-clone'
+	secret: process.env.SESSION_SECRET || 'reddit-clone'
 }))
 
+require('./lib/passport-strategies')
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use((req,res,next) => {
-	app.locals.user = req.session.user
+	app.locals.user = req.user && req.user.user
 	next()
 })
 

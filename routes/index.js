@@ -20,13 +20,12 @@ router.post('/login', session.create)
 
 // guardRoutes middleware
 router.use((req,res,next) => {
-
-  if(req.session.user) {
+  if(req.isAuthenticated()) {
     next()
-  } else if (req.url !== '/') {
-    res.redirect(req.url)
+  } else if (!req.user) {
+    res.redirect(req.originalUrl)
   } else {
-    res.redirect('/')
+    res.redirect('/login')
   }
 })
 
