@@ -38,4 +38,7 @@ router.post('/new', newPost.create)
 
 router.post('/comments/:id', comments.create)
 
+router.get('/logout', session.edit)
+router.post('/logout', session.destroy)
+
 module.exports = router

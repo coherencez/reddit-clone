@@ -10,10 +10,15 @@ nav.navbar.navbar-default.navbar-fixed-top.redditNav
             ul.nav.navbar-nav.navbar-left
                 li(class=page || 'active')
                     a.navEl(href='/') Home
-                li(class=page || 'active')
-                    a.navEl(href='/register') Register
-                li(class=page || 'active')
-                    a.navEl(href='/login') Login
+                if (!user)
+                    li(class=page || 'active')
+                        a.navEl(href='/register') Register
+                    li(class=page || 'active')
+                        a.navEl(href='/login') Login
+                else
+                    li(class=page || 'active')
+                        a.navEl(href='/logout') Logout
+
             ul.nav.navbar-nav.navbar-right
-                if(home)
+                if(home && user)
                     li: form(action='/new'): button.btn.btn-primary.newButton New

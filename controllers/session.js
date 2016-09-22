@@ -19,5 +19,12 @@ module.exports.create = ({session,body: {user, password}},res) => {
 			}
 		})
 }
-module.exports.edit = () => {}
-module.exports.destroy = () => {}
+module.exports.edit = (req,res) => {
+	res.render('logout', {})
+}
+module.exports.destroy = (req,res) => {
+	req.session.destroy((err) => {
+		if(err) throw err 
+		res.redirect('/login')
+	})
+}
