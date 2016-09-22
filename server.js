@@ -6,6 +6,8 @@ const express = require('express')
 		red
 	 } = require('chalk')
 	, bodyParser = require('body-parser')
+	, session = require('express-session')
+	, RedisStore = require('connect-redis')(session)
 
 // project variables
   ,    routes = require('./routes/')
@@ -16,6 +18,15 @@ const express = require('express')
 // express setup
 app.set('port', port)
 app.set('view engine', 'pug')
+app.use(session({
+	store: new RedisStore(),
+	secret: 'reddit-clone'
+}))
+
+app.use((req,res,next) => {
+	app.locals.user = req.session.user
+	next()
+})
 
 // middleware
 app.use(express.static('public'))

@@ -1,6 +1,8 @@
 extends layout.pug
 
 block content
+    if msg
+        h1= msg
     h1.text-center.stitched Register
     form(method='POST')
         .form-group
@@ -8,8 +10,8 @@ block content
             input.form-control#name(placeholder="User " type='text' name='user' required)
         .form-group
             label.contactForm(for='password') Password
-            input.form-control#url(placeholder="http://www.yourarticlehere.com" type='password' name='password' required)
+            input.form-control#url(placeholder="**********" type='password' name='password' required)
         .form-group
-            label.contactForm(for='confirm') Confirm Password
-            input.form-control#image(placeholder="**************" type='password' name='confirm' required)
+            label.contactForm(for='confirmation') Confirm Password
+            input.form-control#image(placeholder="**************" type='password' name='confirmation' required)
         button.btn.btn-success.btn-lg(type="submit") Submit
