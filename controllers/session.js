@@ -5,15 +5,19 @@ module.exports.new = (req,res) => {
 	res.render('login', {})
 }
 module.exports.create = ({session,body: {user, password}},res) => {
-	console.log("HELLO", session);
-	// User.findOne({user})
-	// 	.then(dbUser => {
-	// 		if(dbUser) {
-
-	// 		} else {
-	// 			res.rend....
-	// 		}
-	// 	})
+	User.findOne({user})
+		.then(dbUser => {
+			if(dbUser) {
+				if(dbUser.password === password) {
+					session.user = dbUser
+					res.redirect('/')
+				} else {
+					res.render('/login', {msg: 'Password not correct'})
+				}
+			} else {
+				res.render('/login', {msg: 'User not found'})
+			}
+		})
 }
 module.exports.edit = () => {}
 module.exports.destroy = () => {}
