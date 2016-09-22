@@ -9,7 +9,7 @@ module.exports.new = (req,res) => {
 module.exports.create = ({body: {user,password,confirmation}},res,err) => {
 	console.log("DATA", typeof user)
 	if(password === confirmation) {
-		User.findOne({user})
+		User.findOneByUser(user)
 		 .then(dbUser => {
 		 	if(dbUser) {
 		 		return res.render('register', {msg: 'Username already registered'})

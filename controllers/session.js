@@ -6,7 +6,7 @@ module.exports.new = (req,res) => {
 	res.render('login', {})
 }
 module.exports.create = ({session,body: {user, password}},res,err) => {
-	User.findOne({user})
+	User.findOneByUser(user)
 		.then(dbUser => {
 			if(dbUser) {
 				return new Promise((resolve, reject) => {
